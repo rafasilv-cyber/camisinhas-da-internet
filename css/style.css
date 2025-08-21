@@ -1,0 +1,192 @@
+/* Estilos gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #f5f5f5;  /* Cor clara para contrastar com o fundo escuro */
+    background-color: #2e2e2e;  /* Fundo escuro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Container principal */
+.container {
+    width: 100%;
+    max-width: 1000px;
+    background-color: #333;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);  /* Sombra para destaque */
+    color: #fff;
+}
+
+/* Cabeçalho */
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 40px 0;
+    background-color: #111;  /* Fundo preto para o cabeçalho */
+    color: #e74c3c;  /* Texto vermelho */
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+/* Conteúdo principal */
+main {
+    background-color: #444;  /* Cor escura para o conteúdo */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    margin-bottom: 40px;
+    transition: all 0.3s ease;
+}
+
+main:hover {
+    transform: translateY(-5px);  /* Efeito de elevação ao passar o mouse */
+}
+
+/* Seção de introdução */
+.intro {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.intro p {
+    margin-bottom: 25px;
+    color: #bbb;  /* Texto suave */
+    font-size: 1.2rem;
+}
+
+/* Botões */
+.btn-jogar {
+    display: inline-block;
+    background-color: #e74c3c;  /* Vermelho vibrante */
+    color: #fff;
+    padding: 16px 45px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 20px;
+    margin-bottom: 20px;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-jogar:hover {
+    background-color: #c0392b;  /* Vermelho mais escuro no hover */
+    transform: scale(1.05);  /* Leve aumento ao passar o mouse */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Links */
+.link-tutorial {
+    display: block;
+    color: #e74c3c;
+    text-decoration: none;
+    margin-top: 15px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.link-tutorial:hover {
+    text-decoration: underline;
+}
+
+/* Formulários */
+form {
+    margin: 30px 0;
+    font-size: 1.1rem;
+}
+
+.form-group {
+    margin-bottom: 30px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #ccc;  /* Cor suave para os rótulos */
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #555;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #444;
+    color: #f5f5f5;
+    margin-top: 5px;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus {
+    border-color: #e74c3c;  /* Borda vermelha quando em foco */
+    outline: none;
+}
+
+/* Mensagens de feedback */
+.feedback {
+    padding: 15px;
+    margin: 30px 0;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.feedback-success {
+    background-color: #27ae60;  /* Verde suave para sucesso */
+    color: #fff;
+    border: 1px solid #2ecc71;
+}
+
+.feedback-error {
+    background-color: #c0392b;  /* Vermelho forte para erro */
+    color: #fff;
+    border: 1px solid #e74c3c;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 30px 0;
+    font-size: 14px;
+    background-color: #111;
+    color: #bbb;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 20px;
+    }
+    
+    .btn-jogar {
+        padding: 12px 30px;
+        font-size: 18px;
+    }
+
+    main {
+        padding: 20px;
+    }
+}
