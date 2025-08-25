@@ -1,7 +1,7 @@
 <?php
 require_once 'classes/Jogo.php';
 
-// Se o botão jogar foi clicado, inicia o jogo
+
 if (isset($_POST['jogar'])) {
     $jogo = new Jogo();
     $jogo->iniciar();

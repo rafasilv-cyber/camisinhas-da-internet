@@ -1,14 +1,14 @@
 <?php
 require_once 'classes/Desafio.php';
 
-// Classe específica para o Desafio 2 - Phishing
+
 class DesafioPhishing extends Desafio {
     public function __construct() {
-        parent::__construct(2, 15); // Nível 2, 15 pontos por acerto
+        parent::__construct(2, 15); 
     }
     
     public function validarResposta($resposta) {
-        // A resposta correta é a opção 3 (email suspeito)
+
         return $resposta == 3;
     }
 }
@@ -17,7 +17,7 @@ $desafio = new DesafioPhishing();
 $mensagem = "";
 $classeMsg = "";
 
-// Processa o formulário quando enviado
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $opcao = $_POST["opcao"] ?? 0;
     
@@ -25,8 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $proximaPagina = $desafio->processarAcerto();
         $mensagem = "Parabéns! Você identificou corretamente o email de phishing. Avançando para o próximo desafio...";
         $classeMsg = "feedback-success";
-        
-        // Redireciona após 2 segundos
+
         header("refresh:2;url={$proximaPagina}");
     } else {
         $mensagem = "Resposta incorreta. Analise cuidadosamente os sinais de phishing em cada email.";

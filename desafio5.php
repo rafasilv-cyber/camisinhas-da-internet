@@ -1,14 +1,14 @@
 <?php
 require_once 'classes/Desafio.php';
 
-// Classe específica para o Desafio 5 - Privacidade
+
 class DesafioPrivacidade extends Desafio {
     public function __construct() {
-        parent::__construct(5, 30); // Nível 5, 30 pontos por acerto
+        parent::__construct(5, 30);
     }
     
     public function validarResposta($respostas) {
-        // As respostas corretas são 1, 3 e 4
+    
         $respostasCorretas = [1, 3, 4];
         $acertos = 0;
         
@@ -18,7 +18,7 @@ class DesafioPrivacidade extends Desafio {
             }
         }
         
-        // Verifica se todas as respostas corretas foram selecionadas e nenhuma incorreta
+
         return $acertos == count($respostasCorretas) && count($respostas) == count($respostasCorretas);
     }
 }
@@ -27,7 +27,7 @@ $desafio = new DesafioPrivacidade();
 $mensagem = "";
 $classeMsg = "";
 
-// Processa o formulário quando enviado
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $respostas = $_POST["opcoes"] ?? [];
     
@@ -36,7 +36,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mensagem = "Parabéns! Você identificou corretamente as práticas que protegem sua privacidade online. Avançando para a página de resultados...";
         $classeMsg = "feedback-success";
         
-        // Redireciona após 2 segundos
+ 
         header("refresh:2;url={$proximaPagina}");
     } else {
         $mensagem = "Resposta incorreta. Revise quais práticas realmente ajudam a proteger sua privacidade online.";

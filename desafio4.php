@@ -1,14 +1,14 @@
 <?php
 require_once 'classes/Desafio.php';
 
-// Classe específica para o Desafio 4 - Autenticação
+
 class DesafioAutenticacao extends Desafio {
     public function __construct() {
-        parent::__construct(4, 25); // Nível 4, 25 pontos por acerto
+        parent::__construct(4, 25); 
     }
     
     public function validarResposta($resposta) {
-        // A resposta correta é a opção 2 (autenticação de dois fatores)
+     
         return $resposta == 2;
     }
 }
@@ -17,7 +17,7 @@ $desafio = new DesafioAutenticacao();
 $mensagem = "";
 $classeMsg = "";
 
-// Processa o formulário quando enviado
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $opcao = $_POST["opcao"] ?? 0;
     
@@ -26,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mensagem = "Parabéns! Você escolheu o método mais seguro de autenticação. Avançando para o próximo desafio...";
         $classeMsg = "feedback-success";
         
-        // Redireciona após 2 segundos
+     
         header("refresh:2;url={$proximaPagina}");
     } else {
         $mensagem = "Resposta incorreta. Considere qual método oferece uma camada adicional de segurança além da senha.";

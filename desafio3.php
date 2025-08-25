@@ -1,17 +1,17 @@
 <?php
 require_once 'classes/Desafio.php';
 
-// Classe específica para o Desafio 3 - Backup
+
 class DesafioBackup extends Desafio {
     public function __construct() {
-        parent::__construct(3, 20); // Nível 3, 20 pontos por acerto
+        parent::__construct(3, 20); 
     }
     
     public function validarResposta($resposta) {
-        // Converte a resposta para minúsculas e remove espaços extras
+     
         $resposta = strtolower(trim($resposta));
         
-        // Verifica se a resposta contém as palavras-chave corretas
+ 
         $palavrasChave = ['nuvem', 'disco externo', 'hd externo', 'pendrive'];
         
         foreach ($palavrasChave as $palavra) {
@@ -28,7 +28,7 @@ $desafio = new DesafioBackup();
 $mensagem = "";
 $classeMsg = "";
 
-// Processa o formulário quando enviado
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $resposta = $_POST["resposta"] ?? "";
     
@@ -37,7 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mensagem = "Parabéns! Você identificou corretamente um local seguro para backup. Avançando para o próximo desafio...";
         $classeMsg = "feedback-success";
         
-        // Redireciona após 2 segundos
+   
         header("refresh:2;url={$proximaPagina}");
     } else {
         $mensagem = "Resposta incorreta. Pense em locais externos ao seu computador onde você poderia armazenar cópias dos seus arquivos importantes.";

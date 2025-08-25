@@ -23,7 +23,7 @@
         h1,
         h2,
         h3 {
-            color: #333;
+            color: #751818ff;
             margin-bottom: 15px;
         }
 
@@ -67,8 +67,7 @@
             text-align: center;
             padding: 10px 0;
             font-size: 0.9rem;
-            background-color: #333;
-            color: white;
+ 
         }
     </style>
 </head>

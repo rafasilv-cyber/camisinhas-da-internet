@@ -3,20 +3,20 @@ require_once 'classes/Jogo.php';
 
 $jogo = new Jogo();
 
-// Verifica se o jogador concluiu todos os desafios
+
 if (!$jogo->foiConcluido()) {
-    // Se não concluiu, redireciona para o nível atual
+ 
     $nivelAtual = $jogo->getNivelAtual();
     header("Location: desafio{$nivelAtual}.php");
     exit;
 }
 
-// Calcula a porcentagem de acerto
-$pontuacaoMaxima = 100; // Soma de todos os pontos possíveis
+
+$pontuacaoMaxima = 100;
 $pontuacaoAtual = $jogo->getPontuacao();
 $porcentagem = ($pontuacaoAtual / $pontuacaoMaxima) * 100;
 
-// Define a mensagem com base na pontuação
+
 if ($porcentagem >= 90) {
     $mensagem = "Excelente! Você é um especialista em segurança digital!";
 } elseif ($porcentagem >= 70) {

@@ -1,14 +1,14 @@
 <?php
 require_once 'classes/Desafio.php';
 
-// Classe específica para o Desafio 1 - Senhas Fortes
+
 class DesafioSenhasFortes extends Desafio {
     public function __construct() {
-        parent::__construct(1, 10); // Nível 1, 10 pontos por acerto
+        parent::__construct(1, 10);
     }
     
     public function validarResposta($resposta) {
-        // Verifica se a senha atende aos critérios de segurança
+
         $temMaiuscula = preg_match('/[A-Z]/', $resposta);
         $temMinuscula = preg_match('/[a-z]/', $resposta);
         $temNumero = preg_match('/[0-9]/', $resposta);
@@ -23,7 +23,7 @@ $desafio = new DesafioSenhasFortes();
 $mensagem = "";
 $classeMsg = "";
 
-// Processa o formulário quando enviado
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $senha = $_POST["senha"] ?? "";
     
@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mensagem = "Parabéns! Você criou uma senha forte. Avançando para o próximo desafio...";
         $classeMsg = "feedback-success";
         
-        // Redireciona após 2 segundos
+
         header("refresh:2;url={$proximaPagina}");
     } else {
         $mensagem = "Sua senha não é forte o suficiente. Uma senha forte deve ter pelo menos 8 caracteres, incluir letras maiúsculas, minúsculas, números e caracteres especiais.";
